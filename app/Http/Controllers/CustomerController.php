@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CustomerRequest;
 use App\Http\Resources\OrderResource;
 use App\Models\Customer;
-use Illuminate\Http\Request;
 
 class CustomerController extends Controller
 {
-    public function store(Request $request)
+    public function store(CustomerRequest $request)
     {
         Customer::create($request->all());
 
